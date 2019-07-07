@@ -10,14 +10,21 @@ export default class SidebarInner extends Component {
     }
   }
 
-  renderSidebar(children) {
-    // if (!this.state.isOpen) {
-    //   return null
-    // }
-    console.log(children);
-
+  renderSidebar() {
+    const { content } = this.props;
+    console.log({content});
     return (
-      <div>Load sidebar content</div>
+      <>
+        <div>
+          <img src={`/images/episode-${content.Episode}.jpeg`} alt=""/>
+        </div>
+        <div className="section">
+          <div className="container sidebar-meta">
+            <h3 className="title is-3">{content.Title}</h3>
+            <p className="subtitle">{ content.Plot }</p>
+          </div>
+        </div>
+      </>
     )
   }
 
@@ -28,11 +35,10 @@ export default class SidebarInner extends Component {
   }
 
   render() {
-    const { children } = this.props;
     return (
       <div className="sidebar-container">
-        <SidebarIcon isOpen={this.state.isOpen} onClick={this.toggleSidebar} />
-        {this.renderSidebar(children)}
+        {/* <SidebarIcon isOpen={this.state.isOpen} onClick={this.toggleSidebar} /> */}
+        {this.renderSidebar()}
       </div>
     )
   }

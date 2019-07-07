@@ -53,7 +53,7 @@ export default class ListingItem extends Component {
             </div>
           </div>
 
-          { this.state.isOpen ? <Sidebar></Sidebar> : null }
+          { this.state.isOpen ? <Sidebar content={meta}></Sidebar> : null }
         </div>
       )
     }

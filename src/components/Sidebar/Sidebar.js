@@ -4,36 +4,46 @@ import SidebarInner from './SidebarInner';
 
 const root = document.getElementById("sidebar");
 
-// const Sidebar = () => {
-//   return ReactDOM.createPortal(
-//     <SidebarInner></SidebarInner>,
-//     document.getElementsByClassName('.sidebar'),
-//   )
-// }
-
 export default class Sidebar extends Component {
   constructor() {
     super();
+    this.state = {
+      visible: false
+    }
     this.el = document.createElement("div");
-    console.log(this);
   }
 
   componentDidMount = () => {
+    document.addEventListener('click', this.handleClickOutside, true);
     root.appendChild(this.el);
     root.classList.add('active');
+    this.setState({ visible: true });
   };
 
   componentWillUnmount = () => {
+    document.removeEventListener('click', this.handleClickOutside, true);
     root.removeChild(this.el);
     root.classList.remove('active');
+    this.setState({ visible: false });
   };
 
+  handleClickOutside = event => {
+    const domNode = ReactDOM.findDOMNode(this);
+
+    if (!domNode || !domNode.contains(event.target)) {
+      this.setState({
+        visible: false
+      });
+    }
+  }
+
   render() {
-    const { children } = this.props;
-    console.log(children);
-    return ReactDOM.createPortal(
-      <SidebarInner></SidebarInner>,
-      this.el
-    );
+    if (this.state.visible) {
+      return ReactDOM.createPortal(
+        <SidebarInner {...this.props}></SidebarInner>,
+        this.el
+      );
+    }
+    return null;
   }
 }
