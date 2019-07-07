@@ -1,3 +1,41 @@
 .media {
-  //
+  .card {
+    &:hover {
+      cursor: pointer;
+
+      .image:before {
+        background: rgba(0,0,0,0);
+      }
+    }
+    &-image {
+      position: relative;
+
+      .image {
+        position: relative;
+        &:before {
+          transition: all ease-in .25s;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.7);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &__episode-number {
+      $size: 30px;
+      background-color: $body-color;
+      font-weight: bold;
+      text-align: center;
+      height: $size;
+      width: $size;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: $size;
+    }
+  }
 }

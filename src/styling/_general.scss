@@ -24,3 +24,11 @@ body {
     left: 0;
   }
 }
+
+.container {
+  &.vcentered {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}

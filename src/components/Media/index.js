@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as api from './../../Store';
 
-import Listing from './../listing/Listing';
+import Listing from './../Listing/Listing';
 
 export default class Media extends Component {
 
@@ -28,14 +28,13 @@ export default class Media extends Component {
   render() {
     return (
       <section className="media">
-        <span className="media_season">{ `Season ${this.props.season}` }</span>
-        <h1 className="media_title">{ this.state.media.Title }</h1>
-        <p className="media_excerpt">{this.state.media.Plot}</p>
+        <p className="subtitle is-5">{ `Season ${this.props.season}` }</p>
+        <h1 className="title is-1">{ this.state.media.Title }</h1>
+        <p className="subtitle is-4">{this.state.media.Plot}</p>
         {Object.entries(this.state.media).length > 0 &&
           <Listing title={ this.state.media.Title } season={ this.props.season }></Listing>
         }
       </section>
-
     )
   }
 }
