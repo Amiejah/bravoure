@@ -23,7 +23,7 @@ export default class ListingItem extends Component {
   renderEpisodeMeta() {
     if (!this.state.loading) {
       const { meta } = this.state;
-      const { Title, Episode } = this.props.episode;
+      const { Title } = this.props.episode;
 
       return (
         <div className="card">
