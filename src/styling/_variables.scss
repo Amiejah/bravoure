@@ -1,0 +1,26 @@
+// Update Bulma's global variables
+$family-sans-serif: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: white;
+$control-border-width: 0px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$card-background-color: transparent;
+$card-shadow: none;
+
+$body-color: white;
+$title-color: $body-color;
+$subtitle-color: $body-color;
+// Import only what you need from Bulma
+@import "node_modules/bulma/sass/utilities/_all.sass";
+@import "node_modules/bulma/sass/base/_all.sass";
+@import "node_modules/bulma/sass/grid/_all.sass";
+@import "node_modules/bulma/sass/elements/container.sass";
+@import "node_modules/bulma/sass/elements/title.sass";
+
+@import "node_modules/bulma/sass/components/card.sass";
+@import "node_modules/bulma/sass/layout/section.sass";

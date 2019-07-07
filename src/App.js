@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Header';
+import Media from './components/Media/index';
+import './styling/index.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header text="Bravoure app"></Header>
+        <div className="container">
+          {/* For now We are hardcoding the name, but this could just as well be done with an input[search]? */}
+          <Media search="insecure" season='1'></Media>
+        </div>
+      </div>
+    );
+  }
+};
