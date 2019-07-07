@@ -10,13 +10,23 @@ export default class SidebarInner extends Component {
     }
   }
 
+  getRating = (ratings) => {
+    return (
+      <div>{ratings[0].Value}</div>
+    );
+  }
+
   renderSidebar() {
     const { content } = this.props;
-    console.log({content});
     return (
       <>
         <div>
           <img src={`/images/episode-${content.Episode}.jpeg`} alt=""/>
+        </div>
+        <div className="section">
+          <div className="container sidebar-reviews">
+            {`Episode ${content.Episode}`} - {content.Year} {this.getRating(content.Ratings)}
+          </div>
         </div>
         <div className="section">
           <div className="container sidebar-meta">

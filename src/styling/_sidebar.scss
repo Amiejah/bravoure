@@ -1,14 +1,14 @@
 #sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100vw;
   width: 30rem;
   min-height: 100vh;
   background-color: white;
-  display: none;
+  transition: all ease-in-out .4s;
 
   &.active {
-    display: block;
+    right: 0;
   }
 }
 
@@ -17,5 +17,11 @@
 
   .sidebar-meta * {
     color: inherit;
+  }
+
+  .section {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(151,151,151, .2);
+    }
   }
 }
