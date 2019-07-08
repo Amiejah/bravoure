@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SidebarIcon from './SidebarIcon';
+// import SidebarIcon from './SidebarIcon';
 
 export default class SidebarInner extends Component {
   constructor(props) {
@@ -11,9 +11,12 @@ export default class SidebarInner extends Component {
   }
 
   getRating = (ratings) => {
-    return (
-      <div>{ratings[0].Value}</div>
-    );
+    if (Object.entries(ratings).length) {
+      return (
+        <div>{ratings[0].Value}</div>
+      );
+    }
+    return null;
   }
 
   renderSidebar() {
