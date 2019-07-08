@@ -13,6 +13,7 @@ export default class Media extends Component {
   }
 
   componentDidMount() {
+
     if (this.props.search) {
       const args = {
         t: this.props.search,
@@ -35,9 +36,11 @@ export default class Media extends Component {
             <p className="subtitle is-4">{this.state.media.Plot}</p>
           </div>
         </div>
+
         {Object.entries(this.state.media).length > 0 &&
           <Listing title={ this.state.media.Title } season={ this.props.season }></Listing>
         }
+
       </section>
     )
   }

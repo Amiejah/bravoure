@@ -25,6 +25,15 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .sidebar-reviews {
+    display: flex;
+    justify-content: space-between;
+
+    .anticon-star {
+      color: #EFD358;
+    }
+  }
   .sidebar-meta * {
     color: inherit;
   }
