@@ -59,11 +59,19 @@ export default class ListingItem extends Component {
     }
   }
 
-  getThumb(episode) {
+  getThumb(episode, cardBg = {}) {
+
+    if (episode) {
+      cardBg = {
+        backgroundImage: `url(/images/episode-${episode}.jpeg)`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }
+    }
+
     return (
-      <figure className="image">
-        <img src={`/images/episode-${episode}.jpeg`} alt=""/>
-      </figure>
+      <figure className="image" style={cardBg}></figure>
     );
   }
 

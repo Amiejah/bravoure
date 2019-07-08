@@ -27,8 +27,13 @@ body {
 
 .container {
   &.vcentered {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    @include from($desktop) {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    @include until($tablet) {
+      padding-top: 5rem;
+    }
   }
 }

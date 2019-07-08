@@ -1,4 +1,11 @@
 .media {
+  > .subtitle,
+  > .title {
+    @include until($tablet) {
+      padding: 0 5rem;
+    }
+  }
+
   .card {
     &:hover {
       cursor: pointer;
@@ -12,6 +19,10 @@
 
       .image {
         position: relative;
+
+        @include from($desktop) {
+          height: 135px;
+        }
         &:before {
           transition: all ease-in .25s;
           content: "";
@@ -36,6 +47,18 @@
       top: 0;
       left: 0;
       line-height: $size;
+    }
+
+    .card-content  {
+      > .title,
+      > .subtitle {
+        @include until($tablet) {
+          padding-left: 4rem;
+          padding-right: 4rem;
+        }
+      }
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
