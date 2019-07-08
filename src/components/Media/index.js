@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as api from './../../Store';
 
-import Listing from './../Listing/Listing';
+import Listing from './../listing/Listing';
 
 export default class Media extends Component {
 
