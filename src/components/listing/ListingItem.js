@@ -47,7 +47,7 @@ export default class ListingItem extends Component {
             {this.getThumb(meta.Episode)}
           </div>
           <div className="card-content">
-            <p className="title is-6">{ Title }</p>
+            <h5 className="title is-6">{ Title }</h5>
             <div className="subtitle is-6">
               <Truncate lines={3}>{meta.Plot}</Truncate>
             </div>

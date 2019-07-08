@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import SidebarIcon from './SidebarIcon';
-
+import { Icon } from "antd";
 export default class SidebarInner extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,9 @@ export default class SidebarInner extends Component {
   getRating = (ratings) => {
     if (Object.entries(ratings).length) {
       return (
-        <div>{ratings[0].Value}</div>
+        <>
+          <Icon type="star" theme="filled"></Icon> {ratings[0].Value}
+        </>
       );
     }
     return null;
@@ -32,7 +34,10 @@ export default class SidebarInner extends Component {
         </div>
         <div className="section">
           <div className="container sidebar-reviews">
-            {`Episode ${content.Episode}`} - {content.Year} {this.getRating(content.Ratings)}
+            <span>{`Episode ${content.Episode}`} - {content.Year}</span>
+            <span>
+              {this.getRating(content.Ratings)}
+            </span>
           </div>
         </div>
         <div className="section">

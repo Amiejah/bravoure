@@ -7,7 +7,7 @@
     }
   }
 
-  .level {
+  > .level {
     margin-bottom: 8rem;
     max-width: 80%;
 
@@ -17,7 +17,9 @@
   }
 
   .card {
-    // width: 30%;
+    outline: none !important;
+    border: none !important;
+
     &:hover {
       cursor: pointer;
 
@@ -69,8 +71,27 @@
           padding-right: 4rem;
         }
       }
+      .title {
+        font-size: .95rem;
+      }
+      .subtitle {
+        font-size: .8rem;
+      }
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+}
+
+.icon-holder {
+  display: flex;
+  justify-content: flex-end;
+
+  i {
+    outline: none;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 1rem;
     }
   }
 }

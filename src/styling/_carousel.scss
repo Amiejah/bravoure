@@ -1,2 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+.slick-slide,
+.slick-active {
+  outline: 0 !important;
+  border: none;
+}
