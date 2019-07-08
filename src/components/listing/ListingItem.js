@@ -93,9 +93,9 @@ export default class ListingItem extends Component {
 
   render() {
     return (
-      <div>
+      <>
         {this.renderEpisodeMeta()}
-      </div>
+      </>
     )
   }
 }
