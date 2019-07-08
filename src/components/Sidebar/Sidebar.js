@@ -34,6 +34,7 @@ export default class Sidebar extends Component {
       this.setState({
         visible: false
       });
+      root.classList.remove('active');
     }
   }
 

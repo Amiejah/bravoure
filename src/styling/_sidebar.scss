@@ -1,11 +1,14 @@
 #sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 30rem;
+  right: -9999px;
+  width: 100%;
   min-height: 100vh;
   background-color: white;
   transition: all ease-in-out .4s;
+  @include from($tablet) {
+    width: 30rem;
+  }
 
   &.active {
     right: 0;
