@@ -6,6 +6,15 @@
     }
   }
 
+  .level {
+    margin-bottom: 8rem;
+    max-width: 80%;
+
+    @include from($tablet) {
+      max-width: 52%;
+    }
+  }
+
   .card {
     &:hover {
       cursor: pointer;
@@ -47,6 +56,7 @@
       top: 0;
       left: 0;
       line-height: $size;
+      z-index: 1;
     }
 
     .card-content  {

@@ -28,9 +28,13 @@ export default class Media extends Component {
   render() {
     return (
       <section className="media">
-        <p className="subtitle is-5">{ `Season ${this.props.season}` }</p>
-        <h1 className="title is-1">{ this.state.media.Title }</h1>
-        <p className="subtitle is-4">{this.state.media.Plot}</p>
+        <div className="level">
+          <div className="level-left">
+            <p className="subtitle is-5">{ `Season ${this.props.season}` }</p>
+            <h1 className="title is-1">{ this.state.media.Title }</h1>
+            <p className="subtitle is-4">{this.state.media.Plot}</p>
+          </div>
+        </div>
         {Object.entries(this.state.media).length > 0 &&
           <Listing title={ this.state.media.Title } season={ this.props.season }></Listing>
         }

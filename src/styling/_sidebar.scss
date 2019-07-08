@@ -13,11 +13,18 @@
   &.active {
     right: 0;
   }
+  z-index: 2;
 }
 
 .sidebar-container {
   color: black;
 
+  .episode-cover {
+    height: 52.7vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .sidebar-meta * {
     color: inherit;
   }

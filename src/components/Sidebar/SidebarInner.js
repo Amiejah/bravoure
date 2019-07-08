@@ -21,10 +21,14 @@ export default class SidebarInner extends Component {
 
   renderSidebar() {
     const { content } = this.props;
+
+    const coverImage = {
+      backgroundImage: `url(/images/episode-${content.Episode}.jpeg)`
+    }
+
     return (
       <>
-        <div>
-          <img src={`/images/episode-${content.Episode}.jpeg`} alt=""/>
+        <div className="episode-cover" style={coverImage}>
         </div>
         <div className="section">
           <div className="container sidebar-reviews">
