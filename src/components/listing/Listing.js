@@ -3,7 +3,7 @@ import * as api from './../../Store';
 import React, { Component } from 'react';
 import { Carousel, Icon } from "antd";
 import ListingItem from './ListingItem';
-
+import "antd/lib/carousel/style/index.css";
 export default class Listing extends Component {
 
   constructor(props) {
@@ -12,6 +12,7 @@ export default class Listing extends Component {
       episodes: null,
       media: null,
       loading: true,
+      dotPosition: 'top',
     };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
@@ -74,6 +75,7 @@ export default class Listing extends Component {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
+            dots: true,
             slidesToScroll: 1
           }
         }]
@@ -82,7 +84,7 @@ export default class Listing extends Component {
     return (
       <>
         <div className="columns">
-          <Carousel ref={node => (this.carousel = node)} {...config}>
+          <Carousel ref={node => (this.carousel = node)} {...config} dotPosition={this.state.dotPosition}>
             {episodes.map((episode, i) => {
               episode.season = this.props.season;
               episode.seriesTitle = this.props.title;
