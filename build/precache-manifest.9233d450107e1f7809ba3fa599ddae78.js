@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9105998298c616d0b1a2b2d75544b2a9",
+    "revision": "0a10de3f644d8c96d15d58cdee915e6c",
     "url": "/bravoure/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bravoure/static/css/2.bd160257.chunk.css"
   },
   {
-    "revision": "abfd71d648d32ddfc452",
+    "revision": "cad24ad8e8122e906990",
     "url": "/bravoure/static/css/main.a04ac53f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bravoure/static/js/2.cd621abb.chunk.js"
   },
   {
-    "revision": "abfd71d648d32ddfc452",
-    "url": "/bravoure/static/js/main.9f41a4d7.chunk.js"
+    "revision": "cad24ad8e8122e906990",
+    "url": "/bravoure/static/js/main.f7195d04.chunk.js"
   },
   {
     "revision": "926cbe314871960955dc",
