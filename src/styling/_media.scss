@@ -15,7 +15,10 @@
 
     @include from($tablet) {
       max-width: 52%;
+      margin-left: 0;
+      margin-right: 0;
     }
+
   }
   .columns {
     @include until($tablet) {
