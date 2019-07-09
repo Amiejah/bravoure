@@ -10,6 +10,11 @@ This project is built for the Bravoure assignement.
 
 In the project directory, you can run:
 
+### `npm install`
+
+Runs the dependencies to setup the React environment.
+
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
