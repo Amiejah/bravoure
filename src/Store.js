@@ -7,7 +7,7 @@ import axios from 'axios';
  */
 
 export const API_KEY = '3968beae';
-export const API_URL = `http://www.omdbapi.com?apikey=${API_KEY}`;
+export const API_URL = `https://www.omdbapi.com?apikey=${API_KEY}`;
 
 /*
  * Makes a get request and builds the query string based on an object.
